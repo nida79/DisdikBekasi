@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DisdikBekasi</string>
+    <string name="logo_disdik">logo_disdik</string>
+    <string name="selamat_datang_di_aplikasi_e_absensi_bidang_siber_sandi_jakarta">Selamat datang di aplikasi E-Presensi
+            <br>Disdik Bekasi</br></string>
+    <string name="input_password">Input Password</string>
+    <string name="input_email">Input Email</string>
+    <string name="login">Login</string>
+    <string name="lupa_password">Lupa Password ?</string>
+    <string name="reset_text">Input NIP dan Email Terdaftar Anda Untuk Melakukan Reset Password</string>
+    <string name="input_nip">Input NIP</string>
+    <string name="submit">SUBMIT</string>
+    <string name="scan_berhasil">Scan Berhasil</string>
+    <string name="status">Status</string>
+    <string name="pukul">Pukul</string>
+    <string name="_10_00">10:00</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="mohon_tunggu">Mohon Tunggu...</string>
+    <string name="absensi">Absensi</string>
+    <string name="pengajuan">Cuti</string>
+    <string name="sakit">Pengajuan</string>
+    <string name="logout">Logout</string>
+    <string-array name="wfh_wfo">
+        <item>WFH</item>
+        <item>WFO</item>
+    </string-array>
+</resources>
