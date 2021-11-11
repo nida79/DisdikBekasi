@@ -9,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiService {
 
     private var BASE_URL: String = "http://10.0.2.2/skirpsi-project-hris/public/v1/"
+//   private var BASE_URL: String = "http://10.200.64.93/skirpsi-project-hris/public/v1/"
     val endpoint: ApiEndpoint
         get() {
             val interceptor = HttpLoggingInterceptor()

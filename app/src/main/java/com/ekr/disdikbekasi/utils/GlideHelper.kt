@@ -10,6 +10,9 @@ class GlideHelper {
     companion object {
 
         fun setImage(context: Context, urlImage: String, imageView: ImageView){
+            if (urlImage.contains(" ")){
+                urlImage.replace(" ","%20")
+            }
             Glide .with(context)
                 .load(urlImage)
                 .centerCrop()

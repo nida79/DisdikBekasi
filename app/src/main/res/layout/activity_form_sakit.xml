@@ -1,9 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.sakit.FormSakitActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/_4sdp"
+        android:fontFamily="@font/dosis_bold"
+        android:gravity="center"
+        android:text="Pengajuan Sakit / Izin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_17ssp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/dosis_semibold"
+                android:text="@string/nama_pegawai"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/nama_izin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                tools:text="Andrie " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/dosis_semibold"
+                android:text="@string/nip_pegawai"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/nip_izin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                tools:text="Andrie " />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_270sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="@color/abu_soft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_tanggal_awal_izin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/dosis_semibold"
+                    android:hint="@string/tanggal_awal"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_270sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="@color/abu_soft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_tanggal_akhir_izin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/dosis_semibold"
+                    android:hint="@string/tanggal_akhir"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="@dimen/_270sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="@color/abu_soft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_keterangan_izin"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:fontFamily="@font/dosis_semibold"
+                    android:hint="@string/keterangan_i"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/dosis_semibold"
+                android:text="@string/lampiran"
+                android:textSize="@dimen/_13ssp" />
+
+            <Button
+                android:id="@+id/btn_upload_izin"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:fontFamily="@font/dosis_extrabold"
+                android:gravity="center"
+                android:text="@string/upload"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageView
+                android:id="@+id/img_sakit"
+                android:visibility="gone"
+                android:background="@drawable/img_no_image"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/img" />
+
+            <Button
+                android:id="@+id/btn_kirim_izin"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:fontFamily="@font/dosis_extrabold"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

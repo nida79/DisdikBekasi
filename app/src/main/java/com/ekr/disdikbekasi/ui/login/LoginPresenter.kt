@@ -43,7 +43,8 @@ class LoginPresenter(val view: LoginContract.View) : LoginContract.Presenter {
 
             override fun onFailure(call: Call<ResponseLogin>, t: Throwable) {
                 view.onLoading(false)
-                view.showMessage("Terjadi Kesalahan, Silahkan Coba Kembali")
+                view.showMessage(t.localizedMessage)
+//                view.showMessage("Terjadi Kesalahan, Silahkan Coba Kembali")
 
             }
         })
@@ -59,6 +60,9 @@ class LoginPresenter(val view: LoginContract.View) : LoginContract.Presenter {
         sessionManager.prefRole     = dataLogin.role
         sessionManager.prefStatusK  = dataLogin.statusKaryawan
         sessionManager.prefEmail    = dataLogin.email
+        sessionManager.prefCuti     = dataLogin.totalCuti.toString()
+        sessionManager.prefNIP      = dataLogin.nik
+        sessionManager.prefFoto     = dataLogin.url_file.toString()
 
     }
 }

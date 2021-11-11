@@ -24,6 +24,19 @@ class DialogHelper {
             return dialog
         }
 
+        fun dialogFilter(activity: Activity): Dialog {
+            val dialog = Dialog(activity)
+            dialog.setContentView(R.layout.dialog_filter)
+            dialog.setCanceledOnTouchOutside(false)
+            dialog.window!!.setLayout(
+                WindowManager.LayoutParams.WRAP_CONTENT, WindowManager
+                    .LayoutParams.WRAP_CONTENT
+            )
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.window!!.attributes.windowAnimations = android.R.style.Animation_Dialog
+            dialog.setCancelable(true)
+            return dialog
+        }
 
     }
 }

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.absensi.read.ListAbsensiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/btn_filter"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="35dp"
+            android:background="@drawable/oval_filter"
+            android:drawablePadding="-15dp"
+            android:fontFamily="@font/dosis_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_15sdp"
+            android:text="@string/filter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_filter"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_date_absensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/dosis_semibold"
+            android:textSize="@dimen/_13ssp"
+            app:drawableStartCompat="@drawable/ic_date"
+            tools:ignore="RelativeOverlap"
+            tools:text="Oktober 2021" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_home"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/btn_filter"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/oval_search"
+            android:focusableInTouchMode="true"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:defaultQueryHint="Mau Cari Apa ?"
+            app:queryBackground="@android:color/transparent"
+            app:searchIcon="@drawable/ic_search" />
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:id="@+id/table_heading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow tools:ignore="UselessParent">
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tanggal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/jam_masuk"
+                android:textAlignment="center"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/jam_pulang"
+                android:textAlignment="center"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                style="@style/table_header"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_column="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="Keterangan"
+                android:textAlignment="center"
+                tools:ignore="RtlSymmetry" />
+        </TableRow>
+    </TableLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swp_absensi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_absensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_rv" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/floating_add_absensi"
+            app:tint="@color/white"
+            app:backgroundTint="@color/hijau"
+            app:srcCompat="@drawable/ic_add"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="bottom|end"
+            android:contentDescription="@string/btn_add" />
+    </FrameLayout>
+
+
+
+</LinearLayout>

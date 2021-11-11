@@ -14,14 +14,30 @@
     <string name="status">Status</string>
     <string name="pukul">Pukul</string>
     <string name="_10_00">10:00</string>
-    <string name="keterangan">Keterangan</string>
+    <string name="keterangan_i">Keterangan</string>
     <string name="mohon_tunggu">Mohon Tunggu...</string>
     <string name="absensi">Absensi</string>
     <string name="pengajuan">Cuti</string>
     <string name="sakit">Pengajuan</string>
     <string name="logout">Logout</string>
+    <string name="filter">Filter</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="jam_masuk">Jam Masuk</string>
+    <string name="jam_pulang">Jam Pulang</string>
+    <string name="btn_add">btn-Add</string>
     <string-array name="wfh_wfo">
         <item>WFH</item>
         <item>WFO</item>
     </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="tanggal_awal">Tanggal Awal</string>
+    <string name="tanggal_akhir">Tanggal Akhir</string>
+    <string name="nama_pegawai">Nama Pegawai</string>
+    <string name="nip_pegawai">Nip Pegawai</string>
+    <string name="input_keterangan">Alasan Cuti</string>
+    <string name="sisa_cuti">Sisa Cuti</string>
+    <string name="upload">Upload</string>
+    <string name="img">img</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="lampiran">Lampiran</string>
 </resources>

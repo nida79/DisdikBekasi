@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.absensi.FormAbsensiActivity">
+    tools:context=".ui.absensi.create.FormAbsensiActivity">
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scn"
@@ -18,7 +18,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_3sdp"
+        android:layout_height="2dp"
         android:layout_marginTop="@dimen/_5sdp"
         android:background="@color/abu_soft" />
 
@@ -40,7 +40,8 @@
         android:layout_marginTop="@dimen/_5sdp">
 
         <LinearLayout
-            android:visibility="invisible"
+            android:id="@+id/ll_result_scan"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -151,11 +152,24 @@
                     android:textSize="@dimen/_14ssp"
                     tools:ignore="RtlSymmetry" />
                 <Spinner
+                    android:id="@+id/spinner_attendance"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:entries="@array/wfh_wfo"/>
             </LinearLayout>
+            <Button
+                android:id="@+id/btn_attendance_submit"
+                android:layout_width="@dimen/_270sdp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/hijau"
+                android:fontFamily="@font/dosis_bold"
+                android:text="Submit"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_13ssp" />
+
         </LinearLayout>
 
 
